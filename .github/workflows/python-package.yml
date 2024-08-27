@@ -32,7 +32,7 @@ jobs:
         sudo apt update && sudo apt-get install -f libcurl4-openssl-dev libssl-dev gnutls-dev httping expect libmemcached-dev
     - uses: actions/checkout@v2
     - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v2
+      uses: MatteoH2O1999/setup-python@v4
       with:
         python-version: ${{ matrix.python-version }}
 
@@ -69,7 +69,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: actions/setup-python@v2
+    - uses: MatteoH2O1999/setup-python@v4
       # Must match the Python version in tox.ini for flake8
       with: { python-version: 3.9 }
     - name: Install tox

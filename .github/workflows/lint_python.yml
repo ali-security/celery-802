@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+      - uses: MatteoH2O1999/setup-python@v4
       - run: pip install --upgrade pip wheel
       - run: pip install bandit codespell flake8 isort pytest pyupgrade tox
       - run: bandit -r . || true
